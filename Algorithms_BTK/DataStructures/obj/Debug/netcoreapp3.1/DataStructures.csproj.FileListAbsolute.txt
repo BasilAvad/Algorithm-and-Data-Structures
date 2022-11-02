@@ -1,0 +1,10 @@
+D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\DataStructures\bin\Debug\netcoreapp3.1\DataStructures.deps.json
+D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\DataStructures\bin\Debug\netcoreapp3.1\DataStructures.dll
+D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\DataStructures\bin\Debug\netcoreapp3.1\DataStructures.pdb
+D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.GeneratedMSBuildEditorConfig.editorconfig
+D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.AssemblyInfoInputs.cache
+D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.AssemblyInfo.cs
+D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.csproj.CoreCompileInputs.cache
+D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.dll
+D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.pdb
+D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.csproj.AssemblyReference.cache
