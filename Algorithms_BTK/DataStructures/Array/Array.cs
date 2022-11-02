@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DataStructures.Array
@@ -26,13 +27,34 @@ namespace DataStructures.Array
 
         private void DoubleArray()
         {
-            var temp = new  T[InnerList.Length * 2];
+            var temp = new T[InnerList.Length * 2];
             System.Array.Copy(InnerList, temp, InnerList.Length);
             InnerList = temp;
             //for (int i = 0; i < InnerList.Length; i++)
             //{
             //    temp[i] = InnerList[i];
             //}
+        }
+        public T Remove()
+        {
+            if (Count == 0)
+                throw new Exception("There no more item to be removed from the arry");
+            var temp = InnerList[Count - 1];
+            if (InnerList.Length / 4 == Count)
+                HalhArray();
+            if (Count > 0)
+                Count--;
+            return temp;
+        }
+
+        private void HalhArray()
+        {
+            if (InnerList.Length > 2)
+            {
+                var temp = new T[InnerList.Length / 2];
+                System.Array.Copy(InnerList, temp, temp.Length);
+                InnerList = temp;
+            }
         }
 
         public object Clone()
@@ -42,12 +64,17 @@ namespace DataStructures.Array
 
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            
+            return InnerList.Take(Count).GetEnumerator();
+           
+            // Or ↓ 
+            //return InnerList.Select(x => x).GetEnumerator();
+
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
     }
 }

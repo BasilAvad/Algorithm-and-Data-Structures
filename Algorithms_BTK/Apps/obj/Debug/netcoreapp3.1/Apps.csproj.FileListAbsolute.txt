@@ -15,3 +15,20 @@ D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\o
 D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\obj\Debug\netcoreapp3.1\Apps.dll
 D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\obj\Debug\netcoreapp3.1\Apps.pdb
 D:\Algorithm and  Structures\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\obj\Debug\netcoreapp3.1\Apps.genruntimeconfig.cache
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\bin\Debug\netcoreapp3.1\Apps.exe
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\bin\Debug\netcoreapp3.1\Apps.deps.json
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\bin\Debug\netcoreapp3.1\Apps.runtimeconfig.json
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\bin\Debug\netcoreapp3.1\Apps.runtimeconfig.dev.json
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\bin\Debug\netcoreapp3.1\Apps.dll
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\bin\Debug\netcoreapp3.1\Apps.pdb
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\bin\Debug\netcoreapp3.1\DataStructures.dll
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\bin\Debug\netcoreapp3.1\DataStructures.pdb
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\obj\Debug\netcoreapp3.1\Apps.csproj.AssemblyReference.cache
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\obj\Debug\netcoreapp3.1\Apps.GeneratedMSBuildEditorConfig.editorconfig
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\obj\Debug\netcoreapp3.1\Apps.AssemblyInfoInputs.cache
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\obj\Debug\netcoreapp3.1\Apps.AssemblyInfo.cs
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\obj\Debug\netcoreapp3.1\Apps.csproj.CoreCompileInputs.cache
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\obj\Debug\netcoreapp3.1\Apps.csproj.CopyComplete
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\obj\Debug\netcoreapp3.1\Apps.dll
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\obj\Debug\netcoreapp3.1\Apps.pdb
+D:\Algorithm2022\Algorithm-and-Data-Structures\Algorithms_BTK\Apps\obj\Debug\netcoreapp3.1\Apps.genruntimeconfig.cache
