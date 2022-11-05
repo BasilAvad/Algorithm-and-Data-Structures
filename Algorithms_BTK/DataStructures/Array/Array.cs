@@ -17,6 +17,24 @@ namespace DataStructures.Array
             InnerList = new T[2];
             Count = 0;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="initial"></param>
+        public Array(params T[] initial)
+        {
+            InnerList = new T[initial.Length];
+            Count = 0;
+            foreach (var item in initial)
+                Add(item);
+        }
+        public Array(IEnumerable<T> collection)
+        {
+            InnerList = new T[collection.ToArray().Length];
+            Count = 0;
+            foreach (var item in collection)
+                Add(item);
+        }
         public void Add(T item)
         {
             if (InnerList.Length == Count)
@@ -41,13 +59,17 @@ namespace DataStructures.Array
                 throw new Exception("There no more item to be removed from the arry");
             var temp = InnerList[Count - 1];
             if (InnerList.Length / 4 == Count)
-                HalhArray();
+                HalfArray();
             if (Count > 0)
                 Count--;
             return temp;
         }
+        //public bool Remove(T item)
+        //{
+           
 
-        private void HalhArray()
+        //}
+        private void HalfArray()
         {
             if (InnerList.Length > 2)
             {
@@ -59,14 +81,20 @@ namespace DataStructures.Array
 
         public object Clone()
         {
-            throw new NotImplementedException();
+            //return this.MemberwiseClone();
+
+            // Or ↓ deep copy 
+            var arr = new Array<T>();
+            foreach (var item in this)
+                arr.Add(item);
+            return arr;
         }
 
         public IEnumerator<T> GetEnumerator()
         {
-            
+
             return InnerList.Take(Count).GetEnumerator();
-           
+
             // Or ↓ 
             //return InnerList.Select(x => x).GetEnumerator();
 
