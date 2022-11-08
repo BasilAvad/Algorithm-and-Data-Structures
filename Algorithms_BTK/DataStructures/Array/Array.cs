@@ -6,6 +6,10 @@ using System.Text;
 
 namespace DataStructures.Array
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class Array<T> : IEnumerable<T>, ICloneable
     {
         private T[] InnerList;
@@ -64,11 +68,10 @@ namespace DataStructures.Array
                 Count--;
             return temp;
         }
-        //public bool Remove(T item)
-        //{
-           
-
-        //}
+        public bool Remove(T item)
+        {
+            throw new NotImplementedException();
+        }
         private void HalfArray()
         {
             if (InnerList.Length > 2)
