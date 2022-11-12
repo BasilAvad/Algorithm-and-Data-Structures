@@ -6,10 +6,13 @@ using DataStructures.LinkedList.SinglyLinkedList;
 
 namespace Apps
 {
+
     class Program
     {
+
         static void Main(string[] args)
         {
+
             var linkedList = new SinglyLinkedList<int>();
 
             linkedList.AddFirst(1);
@@ -24,8 +27,41 @@ namespace Apps
             // 3 2 1 4 5 6 7   [ O(n) ] <-
 
 
-            linkedList.AddAfter(linkedList.Head.Next, 33);
-            Console.WriteLine(linkedList);
+
+            linkedList.AddAfter(linkedList.Head.Next, 44);
+            linkedList.AddAfter(linkedList.Head.Next.Next.Next.Next, 45);
+
+            
+            Console.WriteLine("---------------------------------");
+            foreach (var item in linkedList)
+            {
+                Console.WriteLine(item);
+            }
+
+            //var list = new LinkedList<int>();
+            //list.AddFirst(1);
+            //list.AddFirst(2);
+            //list.AddLast(3);
+
+            //list.AddBefore(list.Last, 120);
+            //foreach (var item in list)
+            //{
+            //    if (item == 1)
+            //    {
+
+            //        Console.WriteLine("Add first ");
+            //        Console.WriteLine($"{item} <- The head of the List ");
+            //        Console.WriteLine("Add Last ");
+
+            //    }
+            //    if (item != 1)
+            //    {
+            //        Console.WriteLine(item);
+            //    }
+
+            //}
+
+
             #region Arrays Test 
             //var arr = new DataStructures.Array.Array<int>(1, 2, 3, 4, 5);
             //var crr = arr.Clone() as DataStructures.Array.Array<int>;
