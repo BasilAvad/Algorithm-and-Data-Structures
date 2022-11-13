@@ -6,8 +6,19 @@ using System.Text;
 
 namespace DataStructures.LinkedList.SinglyLinkedList
 {
-    public class SinglyLinkedList<T>:IEnumerable<T>
+    public class SinglyLinkedList<T> : IEnumerable<T>
     {
+        public SinglyLinkedList()
+        {
+
+        }
+
+        public SinglyLinkedList(IEnumerable<T> collection)
+        {
+            foreach (var item in collection)
+                this.AddLast(item);
+
+        }
 
         public SinglyLinkedListNode<T> Head { get; set; }
         private bool isHeadNull => Head == null; /*? true : false*/
@@ -103,5 +114,46 @@ namespace DataStructures.LinkedList.SinglyLinkedList
         {
             return GetEnumerator();
         }
+        /// <summary >
+        /// Remove the First node from linked list 
+        /// 
+        /// BTK Lesson:4.10 
+        /// </summary >
+        /// <returns ></returns>
+        public T RemoveFirst()
+        {
+            if (isHeadNull)
+            {
+                throw new Exception("UnderFlow! Nothing to remove");
+            }
+            var firstValue = Head.Value;
+            Head = Head.Next;
+            return firstValue;
+        }
+        /// <summary>
+        /// Remove the Last node from linked list 
+        ///  <see cref="https://www.btkakademi.gov.tr/portal/course/player/deliver/algoritma-ve-veri-yapilari-ileri-seviye-17824"/>
+        /// BTK Lesson:4.11
+        /// </summary>
+        /// <returns></returns>
+        public T RemoveLast()
+        {
+            if (isHeadNull)
+            {
+                throw new Exception("UnderFlow! Nothing to remove");
+            }
+            var current = Head;
+            SinglyLinkedListNode<T> prev = null;
+            while (current.Next != null)
+            {
+                prev = current;
+                current = current.Next;
+            }
+            var lastValue = prev.Next.Value;
+            prev.Next = null;
+
+            return lastValue;
+        }
+
     }
 }
