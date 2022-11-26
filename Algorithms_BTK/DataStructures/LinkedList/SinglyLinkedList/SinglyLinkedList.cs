@@ -154,6 +154,62 @@ namespace DataStructures.LinkedList.SinglyLinkedList
 
             return lastValue;
         }
+        /// <summary>
+        /// Remove any value from singly linked list 
+        /// </summary>
+        /// <param name="value">The value has been removed from the list </param>
+        public void Remove(T value)
+        {
+            if (isHeadNull)
+            {
+                throw new Exception("UnderFlow! Nothing to remove");
+            }
+            if (value == null)
+            {
+                throw new ArgumentNullException();
+            }
+            var current = Head;
+            SinglyLinkedListNode<T> prev = null;
+            do
+            {
+                if (current.Value.Equals(value))
+                {
+                    // The last Employee ?
+                    if (current.Next == null)
+                    {
+                        // head
+                        if (prev == null)
+                        {
+                            Head = null;
+                            return;
+                        }
+                        // Last Employee
+                        else
+                        {
+                            prev.Next = null;
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        // Head
+                        if (prev == null)
+                        {
+                            Head = Head.Next;
+                            return;
+                        }
+                        else
+                        {
+                            prev.Next = current.Next;
+                            return;
+                        }
+                    }
+                }
+                prev = current;
+                current = current.Next;
+            } while (current != null);
+            throw new ArgumentException("The value could not be found in the list");
+        }
 
     }
 }

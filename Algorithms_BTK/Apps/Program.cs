@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DataStructures;
+using DataStructures.LinkedList.DoublyLinkedList;
 using DataStructures.LinkedList.SinglyLinkedList;
 
 namespace Apps
@@ -13,8 +14,17 @@ namespace Apps
 
         static void Main(string[] args)
         {
+            var list2 = new DoublyLinkedList<int>();
 
-            SinglyLinkedlistApp04();
+            list2.AddFirst(120);
+            list2.AddFirst(12);
+            list2.AddFirst(13);
+            list2.AddFirst(14);
+            //foreach (var item in list2)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
             Console.ReadKey();
         }
         private static void SinglyLinkedlistApp04()
@@ -56,6 +66,21 @@ namespace Apps
             }
             Console.WriteLine(" LINQ    ");
             linkedList.Where(x => x % 2 == 1).ToList().ForEach(x => Console.Write(x + " "));
+
+
+
+            #region Test the Remove Method
+            var list = new SinglyLinkedList<int>(new int[] { 1, 2, 3 });
+            list.Remove(1);
+            list.Remove(2);
+            list.Remove(3);
+            Console.WriteLine(list.Head);
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+            #endregion
+
 
         }
         private static void SinglyLinkedlistApp02()
