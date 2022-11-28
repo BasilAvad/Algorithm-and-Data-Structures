@@ -16,14 +16,16 @@ namespace Apps
         {
             var list2 = new DoublyLinkedList<int>();
 
-            list2.AddFirst(120);
             list2.AddFirst(12);
-            list2.AddFirst(13);
-            list2.AddFirst(14);
-            //foreach (var item in list2)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            //list2.AddFirst(23);
+            ////23 12
+            //list2.AddLast(44);
+            //list2.AddLast(55);
+            // 23 12 44 55
+
+            //list2.AddAfter(list2.Head.Next, new DoublyLinkedListNode<int>(16));
+            list2.AddBefore(list2.Head, new DoublyLinkedListNode<int>(1600));
+
 
             Console.ReadKey();
         }
