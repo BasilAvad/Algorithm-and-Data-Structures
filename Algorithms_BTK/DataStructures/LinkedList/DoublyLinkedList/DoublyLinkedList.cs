@@ -1,13 +1,26 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DataStructures.LinkedList.DoublyLinkedList
 {
-    public class DoublyLinkedList<T>
+    public class DoublyLinkedList<T> : IEnumerable
     {
         public DoublyLinkedListNode<T> Head { get; set; }
         public DoublyLinkedListNode<T> Tail { get; set; }
+
+        public DoublyLinkedList()
+        {
+
+        }
+        public DoublyLinkedList(IEnumerable<T> collection)
+        {
+            foreach (var item in collection)
+            {
+                AddLast(item);
+            }
+        }
         public void AddFirst(T value)
         {
             var newNode = new DoublyLinkedListNode<T>(value);
@@ -106,6 +119,21 @@ namespace DataStructures.LinkedList.DoublyLinkedList
                 refNode.Next = newNode;
                 Head = newNode;
             }
+        }
+        private List<DoublyLinkedListNode<T>> GetAllNode()
+        {
+            var list = new List<DoublyLinkedListNode<T>>();
+            var current = Head;
+            while (current != null)
+            {
+                list.Add(current);
+                current = current.Next;
+            }
+            return list;
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetAllNode().GetEnumerator();
         }
     }
 }

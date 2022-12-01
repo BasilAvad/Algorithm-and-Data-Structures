@@ -14,21 +14,39 @@ namespace Apps
 
         static void Main(string[] args)
         {
-            var list2 = new DoublyLinkedList<int>();
 
-            list2.AddFirst(12);
-            //list2.AddFirst(23);
-            ////23 12
-            //list2.AddLast(44);
-            //list2.AddLast(55);
-            // 23 12 44 55
+            var list = new DoublyLinkedList<char>(new List<char>() { 'x', 'f' });
 
-            //list2.AddAfter(list2.Head.Next, new DoublyLinkedListNode<int>(16));
-            list2.AddBefore(list2.Head, new DoublyLinkedListNode<int>(1600));
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+
 
 
             Console.ReadKey();
         }
+
+        private static void DoblyLinkedListApp001()
+        {
+            var list2 = new DoublyLinkedList<int>();
+
+            list2.AddFirst(12);
+            list2.AddFirst(23);
+            //23 12
+            list2.AddLast(44);
+            list2.AddLast(55);
+            //23 12 44 55
+
+            list2.AddAfter(list2.Head.Prev, new DoublyLinkedListNode<int>(16));
+            //list2.AddBefore(list2.Head, new DoublyLinkedListNode<int>(1600));
+
+            foreach (var item in list2)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
         private static void SinglyLinkedlistApp04()
         {
             var rand = new Random();
