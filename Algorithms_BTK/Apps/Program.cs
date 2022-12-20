@@ -16,7 +16,9 @@ namespace Apps
         {
 
             var list = new DoublyLinkedList<char>(new List<char>() { 'x', 'f' });
-
+            //Console.WriteLine("Has been removed " + list.RemoveLast());
+            //Console.WriteLine("Has been removed " + list.RemoveFirst());
+            list.Delete('f');
             foreach (var item in list)
             {
                 Console.WriteLine(item);

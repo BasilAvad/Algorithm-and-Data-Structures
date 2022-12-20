@@ -9,7 +9,8 @@ namespace DataStructures.LinkedList.DoublyLinkedList
     {
         public DoublyLinkedListNode<T> Head { get; set; }
         public DoublyLinkedListNode<T> Tail { get; set; }
-
+        private bool isHeadNull => Head == null;
+        private bool isTailNull => Tail == null;
         public DoublyLinkedList()
         {
 
@@ -134,6 +135,101 @@ namespace DataStructures.LinkedList.DoublyLinkedList
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetAllNode().GetEnumerator();
+        }
+        public T RemoveFirst()
+        {
+            if (isHeadNull)
+            {
+                throw new Exception("Empty list.");
+            }
+            var temp = Head.Value;
+            if (Head == Tail)
+            {
+                Head = null;
+                Tail = null;
+            }
+            else
+            {
+                Head = Head.Next;
+                Head.Prev = null;
+            }
+            return temp;
+        }
+
+        public T RemoveLast()
+        {
+            if (isTailNull)
+            {
+                throw new Exception("Empty list.");
+            }
+            var temp = Tail.Value;
+            if (Tail == Head)
+            {
+                Head = null;
+                Tail = null;
+            }
+            else
+            {
+                Tail.Prev.Next = null;
+                Tail = Tail.Prev;
+            }
+            return temp;
+        }
+
+
+
+        /// <summary>
+        /// 
+        ///     Head                     Tail
+        ///             _______     ______       ______
+        ///  NULL  <-   |  1  | -> |   2  | ->  |  3   | --> NULL
+        ///             |_____| <- |______| <-  |______|
+        /// 
+        ///    
+        /// </summary>
+        /// <param name="value"></param>
+        public void Delete(T value)
+        {
+            if (isHeadNull)
+            {
+                throw new Exception("Empty list.");
+            }
+            if (Head == null)
+            {
+                if (Head.Value.Equals(value))
+                {
+                    RemoveFirst();
+                }
+                return;
+            }
+            var current = Head;
+            while (current != null)
+            {
+                if (current.Value.Equals(value))
+                {
+                    // For first Value  -> Son eleman
+                    if (current.Prev == null)
+                    {
+                        current.Next.Prev = null;
+                        Head = current.Next;
+                    }
+                    // For secound value  -> Ilk eleman
+                    else if (current.Next == null)
+                    {
+                        current.Prev.Next = null;
+                        Tail = current.Prev;
+                    }
+                    // current  ---> Arada bir eleman
+                    else
+                    {
+                        current.Prev.Next = current.Next;
+                        current.Next.Prev = current.Prev;
+                    }
+                    break;
+                }
+                current = current.Next;
+
+            }
         }
     }
 }
